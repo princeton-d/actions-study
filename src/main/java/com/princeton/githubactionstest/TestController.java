@@ -13,4 +13,9 @@ public class TestController {
         return "hello test version 1";
     }
 
+    @GetMapping("/v2")
+    public String testV2() {
+        return "hello test version 2";
+    }
+
 }
