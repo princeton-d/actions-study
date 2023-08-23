@@ -18,7 +18,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with: ${{ secrets.AWS_PRIVATE_ACCESS_KEY }}
+        with:
+          ref: ${{ github.ref }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_PRIVATE_ACCESS_KEY }}
       
       - name: Set up JDK 17
         uses: actions/setup-java@v1
