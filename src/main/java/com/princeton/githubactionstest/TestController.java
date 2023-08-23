@@ -15,7 +15,7 @@ public class TestController {
 
     @GetMapping("/v2")
     public String testV2() {
-        return "hello test version 2";
+        return "hello test version 2 자동 배포다 이자식아";
     }
 
 }
